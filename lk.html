@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Банковский счет</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+<div class="header">
+  <!-- <button class="profile-button">
+        <span class="profile-icon">👤</span>
+    </button> -->
+
+<!-- Кнопка настроек -->
+<button class="settings-button" onclick="toggleModal()">
+    <span class="settings-icon">⚙️</span>
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+        <p>АО Банк "Национальный стандарт"</p>
+       <button id="logoutButton" class="logout-button">Выйти</button>
+    </div>
+
+
+
+
+<div class="card">
+  <div class="currency-icon">
+    <span class="icon">₽</span>
+  </div>
+  <div class="details">
+    <div class="amount">00,00 ₽</div>
+    <div class="description">GOLD</div>
+  </div>
+  <div class="card-info">
+    <div class="card-number">9368</div>
+    <div class="card-type">МИР</div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+<div class="card-container">
+    <img src="front-card.png" alt="Карта" class="card-image">
+    <div class="card-overlay" id="card-overlay" onclick="toggleCardDetails()">
+        <div id="card-cvv" class="card-cvv">CVV   ***</div>
+        <div id="card-number" class="card-number">**** ** ** 9368</div>
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="modalBg" class="modal-bg" onclick="toggleModal()"></div>
+<div id="settingsModal" class="modal">
+    <div class="modal-content">
+        <!-- Ваши элементы -->
+    
+        <div class="modal-item">
+            <div class="modal-icon">
+                <img src="personal-icon.png" alt="Персональные данные">
+            </div>
+            <span>Персональные данные</span>
+        </div>
+        <hr>
+        <div class="modal-item">
+            <div class="modal-icon">
+                <img src="settings-icon.png" alt="Настройки приложения">
+            </div>
+            <span>Настройки приложения</span>
+        </div>
+        <hr>
+        <div class="modal-item">
+            <div class="modal-icon">
+                <span class="profile-circle"></span>
+            </div>
+            <div class="modal-text">
+                <span>Красненкова Татьяна</span>
+                <p>GOLD</p>
+            </div>
+            <span class="modal-status">&#10004;</span>
+        </div>
+        <hr>
+        <div class="modal-item">
+            <div class="modal-icon">
+                <img src="business-icon.png" alt="ФОП">
+            </div>
+            <span>чп</span>
+            <button class="details-button">Подробнее</button>
+        </div>
+    </div>
+</div>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Новый блок с предупреждением 
+<div class="warning-block">
+    <span class="lock-icon">🔒</span>
+    <div class="warning-text">
+        <p class="warning-title">Операции по данной карте временно ограничены</p>
+        <p class="warning-details">Пожалуйста, ожидайте пока сотрудники банка свяжутся с вами для уточнения</p>
+    </div>
+</div> -->
+
+
+
+
+<div class="payments-section">
+  <div class="section">
+    <div class="section-header">
+      <span>Переводы</span>
+      <a href="#" class="see-all">Все</a>
+    </div>
+    <div class="options">
+      <div class="option">
+        <div class="icon">
+          <img src="bank-icon.png" alt="Из другого банка">
+        </div>
+        <span>Из другого банка</span>
+      </div>
+      <div class="option">
+        <div class="icon">
+          <img src="transfer-icon.png" alt="Между счетами">
+        </div>
+        <span>Между счетами</span>
+      </div>
+      <div class="option">
+        <div class="icon">
+          <img src="card-icon.png" alt="По номеру карты">
+        </div>
+        <span>По номеру карты</span>
+      </div>
+      <div class="option">
+        <div class="icon">
+          <img src="contract-icon.png" alt="По номеру договора">
+        </div>
+        <span>По номеру договора</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span>Платежи</span>
+      <a href="#" class="see-all">Все</a>
+    </div>
+    <div class="options">
+      <div class="option">
+        <div class="icon">
+          <img src="mobile-icon.png" alt="Мобильная связь">
+        </div>
+        <span>Мобильная связь</span>
+      </div>
+      <div class="option">
+        <div class="icon">
+          <img src="utilities-icon.png" alt="ЖКХ">
+        </div>
+        <span>ЖКХ</span>
+      </div>
+      <div class="option">
+        <div class="icon">
+          <img src="services-icon.png" alt="Госуслуги">
+        </div>
+        <span>Госуслуги</span>
+      </div>
+      <div class="option">
+        <div class="icon">
+          <img src="credit-icon.png" alt="Погашение кредита">
+        </div>
+        <span>Погашение кредита</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="tabs">
+  <button class="tab active" onclick="showTransactions('all')">Все операции</button>
+  <button class="tab" onclick="showTransactions('income')">Поступления</button>
+  <button class="tab" onclick="showTransactions('expense')">Списания</button>
+</div>
+
+<div class="transaction-list">
+    <!-- Модальное окно 
+  <ul>
+    <li onclick="openTransactionDetails('transaction1')">
+      <span>516780****8103</span>
+      <span>+50 000 000 ₽</span>
+    </li>
+    <li onclick="openTransactionDetails('transaction2')">
+      <span>516780****8103</span>
+      <span>+10 500 000 ₽</span>
+    </li>
+  </ul>
+    -->
+</div>
+
+
+
+
+<!-- Модальное окно -->
+<div id="transaction-modal" class="transaction-modal hidden">
+  <div class="transaction-modal-content">
+    <header class="modal-header">
+      <h2>Детали транзакции</h2>
+      <button class="close-modal" onclick="closeTransactionModal()">×</button>
+    </header>
+    <div class="modal-body">
+      <p><strong>Дата:</strong> <span id="transaction-date"></span></p>
+      <p><strong>Сумма:</strong> <span id="transaction-amount"></span></p>
+      <p><strong>Описание:</strong> <span id="transaction-description"></span></p>
+        <p><strong>Отправитель:</strong> <span id="transaction-sender"></span></p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+ <a href="https://api.whatsapp.com/send/?phone=79258232580&text&type=phone_number&app_absent=0" class="floating-button">
+    <img src="wth.png" alt="Главная">
+</a>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,511 @@
+
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Левая секция с изображением */
+.image-section {
+    flex: 1;
+    background: #f4f4f4;
+    display: none; /* Скрываем для мобильных */
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Правая секция с формой */
+.form-section {
+    flex: 1.5;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+.logo span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Вкладки */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.tab {
+    flex: 1;
+    padding: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.tab.active {
+    border-bottom: 2px solid #28a745;
+    color: #28a745;
+}
+
+/* Форма */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+label .icon {
+    margin-right: 0.5rem;
+    color: #28a745;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #777;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+.security-info {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 1rem;
+}
+
+/* Адаптивность */
+@media (min-width: 768px) {
+    .image-section {
+        display: block;
+    }
+
+    .form-section {
+        padding: 3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Основной контейнер */
+.dashboard {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Левая панель */
+.sidebar {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 1rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.accounts {
+    margin-top: 1rem;
+}
+
+.accounts h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.account {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.card-list .card {
+    padding: 0.75rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.card.active {
+    border: 1px solid #28a745;
+}
+
+.card-info {
+    font-size: 0.9rem;
+}
+
+/* Центральная панель */
+.main {
+    flex: 3;
+    padding: 1.5rem;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.main-header h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+}
+
+.user-options span {
+    margin-right: 1rem;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: #28a745;
+    border-bottom: 2px solid #28a745;
+}
+
+.card-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card-image img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.details p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: none;
+        padding: 1rem;
+    }
+
+    .main {
+        flex: none;
+        padding: 1rem;
+    }
+
+    .card-details {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+/* Личный кабинет (lk.html) */
+.dashboard-body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 1rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.accounts h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.card-list .card {
+    padding: 0.75rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.card.active {
+    border: 1px solid #28a745;
+}
+
+.main {
+    flex: 3;
+    padding: 1.5rem;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.main-header h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: #28a745;
+    border-bottom: 2px solid #28a745;
+}
+
+.card-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.details p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .card-details {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+/* Стиль для кнопки с изображением */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    cursor: pointer;
+    animation: pulse 1s infinite ease-in-out; /* Пульсирующая анимация */
+}
+
+/* Стили для изображения внутри кнопки */
+.floating-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Анимация пульсации */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Остановка анимации при наведении */
+.floating-button:hover {
+    animation: none;
+}

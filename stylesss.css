@@ -1,0 +1,556 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f5f5f5;
+}
+
+header {
+    width: 100%;
+}
+
+.top-bar {
+    background-color: #e4e8ec;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.top-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.internet-banking a {
+    margin-right: 10px;
+    color: #008000;
+    text-decoration: none;
+}
+
+.internet-banking input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.main-bar {
+    background-color: #3d4e55;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #008000;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 18px;
+}
+
+.main-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.main-menu a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    text-align: right;
+}
+
+.contact-info .phone {
+    font-size: 18px;
+    color: #00cc00;
+}
+
+.contact-info .call-free {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.contact-info button {
+    background-color: #00cc00;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.contact-info button:hover {
+    background-color: #009900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login-button-container {
+    display: flex;
+    justify-content: flex-end; /* Расположить кнопку справа */
+    margin: 10px 20px 0 0; /* Отступ сверху */
+}
+
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007f00;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #005f00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Основной контент */
+.main-content {
+    margin-left: 270px; /* Отступ для левого блока */
+    padding: 20px;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #007f00;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.download-buttons {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.download-buttons a {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+   /* background-color: #4caf50;  Цвет для Google Play */
+}
+
+.download-buttons .app-store {
+   /* background-color: #0073e6;  Цвет для App Store */
+}
+
+.download-buttons a:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+.logo span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Общий контейнер */
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Левый блок */
+.left-sidebar {
+    width: 250px; /* Ширина левого блока */
+    background-color: #ffffff;
+    border-right: 1px solid #e4e8ec;
+    padding: 15px;
+    position: sticky; /* Фиксированный на экране */
+    top: 0;
+    height: 100vh; /* Высота на весь экран */
+    overflow-y: auto; /* Скролл, если контент превышает высоту */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+/* Основной блок */
+.main-content {
+    flex: 1; /* Занимает оставшееся место */
+    padding: 20px;
+    background-color: #ffffff;
+    margin-left: 15px; /* Отступ для визуальной чистоты */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Навигация хлебные крошки */
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #007f00;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #3d4e55;
+    color: white;
+    padding: 20px;
+    font-size: 12px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-left img {
+    width: 150px;
+    margin-top: 10px;
+}
+
+.footer-left a {
+    color: #00cc00;
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+.footer-right {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right li {
+    margin-bottom: 5px;
+}
+
+.footer-right a {
+    color: #00cc00;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+.footer-left p {
+    color: #ffffff;
+   
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .left-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    .top-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .internet-banking {
+        flex-direction: column;
+    }
+    .main-menu a {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+img, iframe, video {
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .sidebar-menu {
+        display: none;
+    }
+    .feedback-button {
+        width: 100%;
+
+}
+
+
+    
+
+
+
+
+
+
+    .top-bar, .main-menu,.contact-info {
+        display: none;
+    }
+
+    .login-button-container {
+        display: block; /* Убедитесь, что кнопка видима */
+        margin: 20px auto;
+        text-align: center; /* Центрирование кнопки */
+    }
+
+    .login-button {
+        width: 35%; /* Адаптивная ширина кнопки */
+    }
+
+
+
+
+
+
+/* Стиль для кнопки с изображением */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    cursor: pointer;
+    animation: pulse 1s infinite ease-in-out; /* Пульсирующая анимация */
+}
+
+
+
+
+/* Стили для изображения внутри кнопки */
+.floating-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+/* Анимация пульсации */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Остановка анимации при наведении */
+.floating-button:hover {
+    animation: none;
+}

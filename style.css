@@ -1,0 +1,752 @@
+
+
+
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Шапка */
+.header {
+    background-color: #4caf50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.header p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.logout-button {
+    background-color: white;
+    color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    background-color: #e8e8e8;
+}
+
+/* Информация о счете */
+.account-info {
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.balance h2 {
+    color: #4caf50;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Табуляция */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color: #4caf50;
+}
+
+.tab.active {
+    border-bottom: 2px solid #4caf50;
+    font-weight: bold;
+}
+
+/* Транзакции */
+.transactions {
+    margin: 15px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction:last-child {
+    border-bottom: none;
+}
+
+.transaction p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.transaction p:last-child {
+    font-weight: bold;
+    color: #000;
+}
+
+
+
+
+/* Кнопка с иконкой профиля */
+.profile-button {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+.profile-button:hover {
+    background-color: #f0f0f0;
+}
+
+.profile-icon {
+    font-size: 20px;
+    color: #4caf50;
+}
+
+
+
+/* Контейнер для левой части заголовка */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Отступ между кнопками */
+}
+
+/* Кнопка с иконкой настроек */
+.settings-button {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.settings-button:hover {
+    background-color: #f0f0f0;
+}
+
+.settings-icon {
+    font-size: 20px;
+    color: #4caf50;
+}
+
+
+
+
+
+
+
+
+/* Блок с предупреждением */
+.warning-block {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #ff5722, #ff7043);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.lock-icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.warning-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.warning-title {
+    font-weight: bold;
+    margin: 0;
+}
+
+.warning-details {
+    margin: 0;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Контейнер карты */
+.card-container {
+    position: relative;
+    width: 300px; /* Ширина карты */
+    height: 180px; /* Высота карты */
+    margin: 20px auto; /* Центровка */
+}
+
+/* Изображение карты */
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Полупрозрачный блок */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.02); /* Полупрозрачный фон */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Текст ближе к низу */
+    align-items: flex-end; /* Текст выравнивается справа */
+    border-radius: 10px;
+    color: white; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    cursor: pointer;
+    z-index: 10; /* Поверх изображения */
+    padding: 15px; /* Отступы */
+    box-sizing: border-box;
+}
+
+/* Номер карты */
+#card-number {
+    margin-bottom: 19px; /* Отступ от CVV */
+    margin-right: 90px; /* Выравнивание справа */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Тень текста */
+    font-size: 14px;
+}
+
+/* CVV */
+#card-cvv {
+    margin-right: 38px; /* Выравнивание справа */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Тень текста */
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.currency-icon .icon {
+  display: inline-block;
+  font-size: 26px;
+  color: #5a85ff;
+}
+
+.details {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.amount {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-number {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card-type {
+  font-size: 12px;
+  color: #666;
+}
+
+.crown {
+  display: flex;
+  align-items: center;
+}
+
+.crown .icon {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.crown .amount {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+.payments-section {
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section-header span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.section-header .see-all {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.section-header .see-all:hover {
+  text-decoration: underline;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.option:hover {
+  background: #f0f0f0;
+}
+
+.option .icon img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.option span {
+  font-size: 14px;
+  color: #333;
+}
+
+
+
+
+
+
+
+
+/* Стиль для кнопки с изображением */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    cursor: pointer;
+    animation: pulse 1s infinite ease-in-out; /* Пульсирующая анимация */
+}
+
+/* Стили для изображения внутри кнопки */
+.floating-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Анимация пульсации */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Остановка анимации при наведении */
+.floating-button:hover {
+    animation: none;
+}
+
+
+
+
+
+
+
+/* Табуляция */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color: #4caf50;
+}
+
+.tab.active {
+    border-bottom: 2px solid #4caf50;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+/* Стили для списка операций */
+.transaction-list {
+
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.transaction-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transaction-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.transaction-list li:last-child {
+  border-bottom: none;
+}
+
+.transaction-list li span:first-child {
+  font-weight: bold;
+  color: #333;
+}
+
+.transaction-list li span:last-child {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Стили для модального окна */
+.transaction-modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 20px;
+  animation: slideUp 0.3s ease-in-out;
+}
+
+.transaction-modal.hidden {
+  display: none;
+}
+
+.transaction-modal-content h2 {
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.transaction-modal-content p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Стили для кнопки крестика */
+.close-modal {
+  position: absolute;
+  top: 1px;
+  right: 2%;
+  background: none;
+  border: none;
+  font-size: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  color:  #eee;
+}
+
+.close-modal:hover {
+  color: #eee;
+}
+
+/* Анимация для модального окна */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Фон подложки */
+.modal-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Общие стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-item {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-icon {
+    flex-shrink: 0;
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+    display: flex;
+    align-items: center; /* Выравнивание содержимого иконки */
+    justify-content: center;
+}
+
+.modal-icon img,
+.profile-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    
+    line-height: 40px;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+     margin-right: 20px;
+}
+
+.modal-text {
+    display: flex;
+    flex-direction: column; /* Текст расположен вертикально */
+    justify-content: center;
+}
+.modal-text span {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+
+}
+
+.modal-text p {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.details-button {
+    background-color: transparent;
+    border: none;
+    color: #6200ea;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal,
+.modal-bg {
+    animation: fadeIn 0.3s ease-in-out;
+}

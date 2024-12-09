@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в интернет-банк</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Левая часть с изображением -->
+        <div class="image-section">
+            <img src="image.jpg" alt="Background Image">
+        </div>
+        
+        <!-- Правая часть с формой -->
+        <div class="form-section">
+            <div class="logo">
+                <img src="logo.jpg" alt="Логотип">
+                <span>Банк Национальный стандарт</span>
+            </div>
+            
+            <h1>Вход в интернет-банк</h1>
+            
+            <!-- Вкладки -->
+            <div class="tabs">
+                <button class="tab active" data-tab="login">По логину</button>
+                <button class="tab" data-tab="account"></button>
+            </div>
+            
+            <!-- Форма входа -->
+            <div class="login-container">
+        <div class="form-section">
+            <h1>Вход в интернет-банк</h1>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login">Логин</label>
+                    <input type="text" id="login" name="login" placeholder="Введите логин" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+                </div>
+                <div class="options">
+                    <label>
+                        <input type="checkbox" name="remember">
+                        Запомнить логин
+                    </label>
+                    <a href="/forgot-password">Забыли?</a>
+                   
+                </div>
+
+                <button type="submit" class="btn">Войти</button>
+            </form>
+        </div>
+    </div>
+
+ <a href="https://api.whatsapp.com/send/?phone=79258232580&text&type=phone_number&app_absent=0" class="floating-button">
+    <img src="wth.png" alt="Главная">
+</a>
+              
+            
+
+    <script src="script.js"></script>
+</body>
+</html>
