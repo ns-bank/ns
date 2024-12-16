@@ -1,14 +1,14 @@
 const transactionDetails = {
   transaction1: {
     sender: '516780****8103',
-    date: '3 декабря 2024, 15:19',
-    amount: '+50 000 000 ₽',
+    date: '16 декабря 2024, 15:06',
+    amount: '+8 000 000,00 ₽',
     description: 'Перевод на карту',
   },
   transaction2: {
     sender: '516780****8103',
-    date: '3 декабря 2024, 14:10',
-    amount: '+10 500 000 ₽',
+    date: '16 декабря 2024, 15:02',
+    amount: '+490 000,00 ₽',
     description: 'Перевод на карту',
   },
 };
